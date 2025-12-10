@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- NO color of its own, just transparent -->
+    <solid android:color="@android:color/transparent" />
+
+    <!-- Rounded corners to match your design -->
+    <corners android:radius="24dp" />
+
+    <!-- Soft glass-like outline -->
+    <stroke
+        android:width="1.5dp"
+        android:color="#40FFFFFF" />
+
+</shape>

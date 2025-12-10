@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="CSIR"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GlassCalendar">
+
+        <!-- LOGIN = launcher -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Home menu -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+
+        <!-- About (WebView) -->
+        <activity
+            android:name=".AboutActivity"
+            android:exported="false" />
+
+        <!-- Major Programs -->
+        <activity
+            android:name=".ProgramsActivity"
+            android:exported="false" />
+
+        <!-- Calendar -->
+        <activity
+            android:name=".CalendarActivity"
+            android:exported="false" />
+
+        <!-- Reminder -->
+        <activity
+            android:name=".ReminderActivity"
+            android:exported="false" />
+
+        <!-- Meetings -->
+        <activity
+            android:name=".MeetingActivity"
+            android:exported="false" />
+
+        <!-- Broadcast receiver for reminders -->
+        <receiver
+            android:name=".EventReminderReceiver"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
