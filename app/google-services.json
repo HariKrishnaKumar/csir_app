@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "278406307766",
+    "project_id": "csir-app-f07be",
+    "storage_bucket": "csir-app-f07be.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278406307766:android:b870e50d39a8ec2b136b17",
+        "android_client_info": {
+          "package_name": "csir.app.calendar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBomS-fAnM1-oratC6sI518TKti7bb0F4M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -5,9 +5,8 @@
     android:id="@+id/rootHome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient">
+    android:background="@drawable/bg_home_gradient">
 
-    <!-- full-screen scrollable area -->
     <ScrollView
         android:id="@+id/scrollHome"
         android:layout_width="0dp"
@@ -18,249 +17,201 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Make this match_parent so fillViewport centers content vertically -->
         <LinearLayout
-            android:id="@+id/containerHomeCards"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center_vertical|center_horizontal"
-            android:paddingStart="24dp"
-            android:paddingEnd="24dp"
+            android:gravity="center_horizontal"
             android:paddingTop="32dp"
             android:paddingBottom="32dp">
 
-            <!-- Each card size increased; icons on right; text left -->
-            <com.google.android.material.card.MaterialCardView
+            <!-- ABOUT -->
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cardAbout"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_marginBottom="18dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="35dp"
                 app:cardCornerRadius="26dp"
+                app:cardElevation="0dp"
                 app:cardUseCompatPadding="false"
-                app:cardPreventCornerOverlap="false"
-                app:cardElevation="2dp"
-                app:strokeWidth="0dp"
                 app:cardBackgroundColor="@android:color/transparent">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <!-- GLASS PANEL INSIDE CARD -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/bg_glass_card"
-                    android:paddingStart="18dp"
-                    android:paddingEnd="18dp">
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="100dp">
 
                     <TextView
-                        android:id="@+id/textAbout"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/about"
-                        android:textSize="20sp"
+                        android:layout_weight="1"
+                        android:text="About"
+                        android:textSize="36sp"
                         android:textStyle="bold"
-                        android:textColor="#222222"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/iconAbout"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintVertical_bias="0.5"
-                        app:layout_constraintHorizontal_bias="0.0" />
+                        android:textColor="#000000"/>
 
                     <ImageView
-                        android:id="@+id/iconAbout"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:contentDescription="@string/about"
                         android:src="@drawable/ic_home_about"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.google.android.material.card.MaterialCardView>
+                        android:contentDescription="About"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-            <!-- Programs -->
-            <com.google.android.material.card.MaterialCardView
+            <!-- MAJOR PROGRAMS -->
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cardPrograms"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_marginBottom="18dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="35dp"
                 app:cardCornerRadius="26dp"
+                app:cardElevation="0dp"
                 app:cardUseCompatPadding="false"
-                app:cardPreventCornerOverlap="false"
-                app:cardElevation="2dp"
-                app:strokeWidth="0dp"
                 app:cardBackgroundColor="@android:color/transparent">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/bg_glass_card"
-                    android:paddingStart="18dp"
-                    android:paddingEnd="18dp">
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="24dp">
 
                     <TextView
-                        android:id="@+id/textPrograms"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/programs"
-                        android:textSize="20sp"
+                        android:layout_weight="1"
+                        android:text="Major Programs"
+                        android:textSize="34sp"
                         android:textStyle="bold"
-                        android:textColor="#222222"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/iconPrograms"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintVertical_bias="0.5" />
+                        android:textColor="#000000"/>
 
                     <ImageView
-                        android:id="@+id/iconPrograms"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:contentDescription="@string/programs"
                         android:src="@drawable/ic_home_programs"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.google.android.material.card.MaterialCardView>
+                        android:contentDescription="Programs"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-            <!-- Calendar -->
-            <com.google.android.material.card.MaterialCardView
+            <!-- CALENDAR -->
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cardCalendar"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_marginBottom="18dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="35dp"
                 app:cardCornerRadius="26dp"
+                app:cardElevation="0dp"
                 app:cardUseCompatPadding="false"
-                app:cardPreventCornerOverlap="false"
-                app:cardElevation="2dp"
-                app:strokeWidth="0dp"
                 app:cardBackgroundColor="@android:color/transparent">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/bg_glass_card"
-                    android:paddingStart="18dp"
-                    android:paddingEnd="18dp">
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="75dp">
 
                     <TextView
-                        android:id="@+id/textCalendar"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/calendar"
-                        android:textSize="20sp"
+                        android:layout_weight="1"
+                        android:text="Calendar"
+                        android:textSize="36sp"
                         android:textStyle="bold"
-                        android:textColor="#222222"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/iconCalendar"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintVertical_bias="0.5" />
+                        android:textColor="#000000"/>
 
                     <ImageView
-                        android:id="@+id/iconCalendar"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:contentDescription="@string/calendar"
                         android:src="@drawable/ic_home_calendar"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.google.android.material.card.MaterialCardView>
+                        android:contentDescription="Calendar"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-            <!-- Reminder -->
-            <com.google.android.material.card.MaterialCardView
+            <!-- REMINDER -->
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cardReminder"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_marginBottom="18dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="35dp"
                 app:cardCornerRadius="26dp"
+                app:cardElevation="0dp"
                 app:cardUseCompatPadding="false"
-                app:cardPreventCornerOverlap="false"
-                app:cardElevation="2dp"
-                app:strokeWidth="0dp"
                 app:cardBackgroundColor="@android:color/transparent">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/bg_glass_card"
-                    android:paddingStart="18dp"
-                    android:paddingEnd="18dp">
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="68dp">
 
                     <TextView
-                        android:id="@+id/textReminder"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/reminder"
-                        android:textSize="20sp"
+                        android:layout_weight="1"
+                        android:text="Reminder"
+                        android:textSize="36sp"
                         android:textStyle="bold"
-                        android:textColor="#222222"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/iconReminder"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintVertical_bias="0.5" />
+                        android:textColor="#000000"/>
 
                     <ImageView
-                        android:id="@+id/iconReminder"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:contentDescription="@string/reminder"
                         android:src="@drawable/ic_home_reminder"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.google.android.material.card.MaterialCardView>
+                        android:contentDescription="Reminder"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-            <!-- Meetings -->
-            <com.google.android.material.card.MaterialCardView
+            <!-- MEETINGS -->
+            <androidx.cardview.widget.CardView
                 android:id="@+id/cardMeetings"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:layout_marginBottom="18dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="35dp"
                 app:cardCornerRadius="26dp"
+                app:cardElevation="0px"
                 app:cardUseCompatPadding="false"
-                app:cardPreventCornerOverlap="false"
-                app:cardElevation="2dp"
-                app:strokeWidth="0dp"
                 app:cardBackgroundColor="@android:color/transparent">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/bg_glass_card"
-                    android:paddingStart="18dp"
-                    android:paddingEnd="18dp">
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="70dp">
 
                     <TextView
-                        android:id="@+id/textMeetings"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/meetings"
-                        android:textSize="20sp"
+                        android:layout_weight="1"
+                        android:text="Meetings"
+                        android:textSize="36sp"
                         android:textStyle="bold"
-                        android:textColor="#222222"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/iconMeetings"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintVertical_bias="0.5" />
+                        android:textColor="#000000"/>
 
                     <ImageView
-                        android:id="@+id/iconMeetings"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:contentDescription="@string/meetings"
                         android:src="@drawable/ic_home_meetings"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.google.android.material.card.MaterialCardView>
+                        android:contentDescription="Meetings"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

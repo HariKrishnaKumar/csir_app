@@ -12,8 +12,8 @@
     <color name="bg_gradient_center">#EDD78F</color>
     <color name="bg_gradient_end">#EDD1B0</color>
 
-    <color name="reminder_admin_bg">#33FF9800</color>   <!-- translucent orange -->
-    <color name="reminder_user_bg">#332196F3</color>   <!-- translucent blue -->
+    <color name="reminder_admin_bg">#33FF00F7</color>   <!-- translucent orange -->
+    <color name="reminder_user_bg">#7D0090FF</color>   <!-- translucent blue -->
 
     <color name="home_text">#2b2b2b</color>
 </resources>
